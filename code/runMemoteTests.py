@@ -8,7 +8,7 @@ import glob
 import pandas as pd
 
 path         = os.getcwd()
-results_path = "../test_results"
+results_path = "../results/MEMOTE_test"
 #Create directory for output reports
 try:
 	os.mkdir(results_path)
@@ -26,8 +26,8 @@ for file in modelFiles:
 
 
 ##Run memote Diff test for multiple models of a given organism
-orgs_multi = ['S. cerevisiae', 'Y. lipolytica', 'P. pastoris']
-shortNames = ['yli', 'sce', 'ppa']
+orgs_multi = ['S. cerevisiae']#'Y. lipolytica','P. pastoris']
+shortNames = ['sce']#,'yli,' 'ppa']
 
 #read file with relations between org name and model IDs
 tableFile  = '../models/orgs_model_IDs_table.txt'
