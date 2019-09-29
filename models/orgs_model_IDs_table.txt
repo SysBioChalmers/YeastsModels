@@ -40,3 +40,4 @@ C. glabrata	iNX804	SBML
 K. lactis	iOD907	SBML
 C. tropicalis	iCT646	SBML
 Z. parabailii	ZyPa1	NA
+K. marxianus	Kmar	SBML	
