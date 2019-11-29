@@ -1,16 +1,17 @@
 #!/usr/bin/env Rscript
-# Functions for loading and minor formatting of all different datasets used in this study
 # Ivan Domenzain
 library(ggplot2)
 library(dplyr)
 library(ggrepel)
 setwd('/Users/ivand/Documents/GitHub/YeastsModels/code')
 source('plotResults.R')
-dataset <- read.csv(file = '../results/results_table.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
+dataset <- read.csv(file = '../data/results_table.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
 for (i in 1:ncol(dataset)){
   dataset[,i] <- gsub('#VALUE!',NaN,dataset[,i])
   dataset[is.na(dataset[,i]),i] <- NaN
 }
+colorsOrg <- c('grey','cyan','pink','orange','purple','brown','blue','black','green','red','dark green')
+
 #File availability plot
 setwd('../results/plots')
 column <- which(colnames(dataset)=='Available_file')
@@ -24,7 +25,6 @@ column  <- which(colnames(dataset)=='Organism')
 output  <- getClassCounts(dataset,column)
 plotTitle <- 'models_organisms.png'
 png(plotTitle,width = 600, height = 600)
-colorsOrg <- c('red','orange','grey','purple','pink','blue','cyan','black','green','brown')
 barPlot_counts(output,'Organism','# of Models',12,colorsOrg,0.6,TRUE)
 dev.off()
 
@@ -87,6 +87,5 @@ plotTitle <- 'AnualAvgCitations_scatter.png'
 png(plotTitle,width = 600, height = 600)
 xLabel <- 'Elapsed time since publication [years]'
 yLabel <- 'Anual average citations'
-colors <- c('red','orange','grey','purple','pink','blue','cyan','black','green','brown')
-scatterPlot(dataset,column,12,xLabel,yLabel,colors,1)
+scatterPlot(dataset,column,12,xLabel,yLabel,colorsOrg,1)
 dev.off()
