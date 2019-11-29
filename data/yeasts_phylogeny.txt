@@ -1,0 +1,12 @@
+Name	Domain	Kingdom	Phylum	Class	Order	Family	KEGG ID	# of models
+saccharomyces cerevisiae	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	sce	18
+komagataella pastoris	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	*	7
+scheffersomyces stipitis	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	pic	3
+candida glabrata	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	cgr	1
+kluyveromyces lactis	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	kla	1
+Zygosaccharomyces parabailii	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	*	1
+kluyveromyces marxianus	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	saccharomycetaceae	kmx	1
+yarrowia lipolytica	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	Dipodascaceae	yli	5
+candida tropicalis	eukaryotes	fungi	Ascomycota	saccharomycetes	saccharomycetales	Debaryomycetaceae	ctp	1
+schizosaccharomyces pombe	eukaryotes	fungi	Ascomycota	schizosaccharomycetes	schizosaccharomycetales	schizosaccharomycetaceae	spo	1
+rhodotorula toruloides	eukaryotes	fungi	Basidiomycota	Ustilaginomycetes	Ustilaginales	Ustilaginaceae	*	3
