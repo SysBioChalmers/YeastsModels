@@ -75,7 +75,7 @@ scatterPlot <- function(df,yCol,fontSize,xLabel,yLabel,colors,alphaVal){
   df[,yCol]       <- as.numeric(df[,yCol])
   df$Organism     <- as.factor(df$Organism)
   
-  p <- ggplot(df, aes(x=Elapsed_time, y=df[,yCol], shape=Primary_Format)) +
+  p <- ggplot(df, aes(x=Elapsed_time, y=df[,yCol], shape=MEMOTE)) +
        geom_point(size=5,aes(colour=Organism))+ scale_colour_manual(values = colors) + 
        theme_bw(base_size = 2*fontSize) + xlab(xLabel) +  ylab(yLabel)
   plot(p)
