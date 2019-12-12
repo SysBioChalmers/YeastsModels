@@ -19,7 +19,7 @@ getPieChart <- function(dataset,column,fontSize,colors,titleStr,alphaVal,noUpper
   prop <- round(prop, digits = 2)
   df   <- data.frame(classes,N_elements,prop,stringsAsFactors = FALSE)
   # Add label position
-  df <- df %>%arrange(desc(classes)) %>%mutate(lab.ypos = cumsum(prop) - 0.5*prop)
+  df <- df %>%arrange(desc(classes))%>%mutate(lab.ypos = cumsum(prop) - 0.5*prop)
   
   #Create plot object
   p <- ggplot(df, aes(x = 2, y = prop, fill = classes)) +
@@ -75,7 +75,7 @@ scatterPlot <- function(df,yCol,fontSize,xLabel,yLabel,colors,alphaVal){
   df[,yCol]       <- as.numeric(df[,yCol])
   df$Organism     <- as.factor(df$Organism)
   
-  p <- ggplot(df, aes(x=Elapsed_time, y=df[,yCol], shape=MEMOTE)) +
+  p <- ggplot(df, aes(x=Elapsed_time, y=df[,yCol], shape=growth)) +
        geom_point(size=5,aes(colour=Organism))+ scale_colour_manual(values = colors) + 
        theme_bw(base_size = 2*fontSize) + xlab(xLabel) +  ylab(yLabel)
   plot(p)
