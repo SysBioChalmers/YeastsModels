@@ -4,9 +4,11 @@ library(ggplot2)
 library(dplyr)
 library(ggrepel)
 library(viridis)
+
 setwd('/Users/ivand/Documents/GitHub/YeastsModels/code')
 source('plotResults.R')
-dataset    <- read.csv(file = '../data/results_table.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
+dataset    <- read.csv(file = '../data/models_table.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
+#Duplicate dataset for plotting MEMOTE results for S. cerevisiae models
 dataMEMOTE <- dataset
 for (i in 1:ncol(dataset)){
   dataset[,i]     <- gsub('#VALUE!',NaN,dataset[,i])
@@ -79,18 +81,18 @@ p <- getPieChart(data,column,12,c('red','blue'),'',0.5)
 dev.off()
 
 #External DB plot
-column <- which(colnames(dataset)=='external')
+column <- which(colnames(dataset)=='external_DB')
 plotTitle <- 'externalDB.png'
 png(plotTitle,width = 600, height = 600)
 p <- getPieChart(dataset,column,12,c('grey','blue','black','green','red','purple','orange'),'',0.5,TRUE)
 dev.off()
 
 #Memote plot
-column <- which(colnames(dataset)=='MEMOTE')
+column <- which(colnames(dataset)=='MEMOTE_test')
 data <- dataset[which(dataset[,column]!='NaN'),]
 plotTitle <- 'MEMOTE.png'
 png(plotTitle,width = 600, height = 600)
-p <- getPieChart(data,column,12,c('red','blue'),'',0.5)
+p <- getPieChart(data,column,12,c('blue','red'),'',0.5)
 dev.off()
 
 #Formats plot
