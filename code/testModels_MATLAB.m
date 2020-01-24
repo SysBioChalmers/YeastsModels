@@ -7,7 +7,8 @@ modelsImport = [];
 modelsSolve  = [];
 modelsObj    = [];
 modelsGrowth = [];
-bioRxnStrs   = {'biomass' 'BIOMASS' 'growth' 'GROWTH' 'VGRO'};
+modelsBioRxn = [];
+bioRxnStrs   = {'biomass' 'Biomass' 'BIOMASS' 'growth' 'GROWTH' 'VGRO'};
 for i=1:length(content)
     file = content(i).name;
     if contains(file,'.xml')
@@ -44,23 +45,26 @@ for i=1:length(content)
             end
         end
         modelsImport = [modelsImport;{mImport}];
-        if isempty(mObjective)
-            mObjective = {''};
-            %If no objective was found then search for biomass reaction in
-            %the model
-            if isfield(modelStruct,'rxnNames')
-                for bioStr = bioRxnStrs
-                    x = find(contains(modelStruct.rxnNames,bioStr),1);
-                    if ~isempty(x)
-                        mObjective  = {['alt_' num2str(x)]};
+        modelsObj    = [modelsObj;{mObjective}];
+        %Search for biomass or growth pseudoreactions
+        if isfield(modelStruct,'rxnNames')
+           mBioRxn = '';
+           j=1;
+           while (isempty(mBioRxn) && j<=length(bioRxnStrs))
+               bioStr = bioRxnStrs(j);
+               x      = find(contains(modelStruct.rxnNames,bioStr),1);
+               if ~isempty(x)
+                    mBioRxn = modelStruct.rxnNames{x};
+                    if isempty(mObjective)
+                        %Set found biomass reaction as objective
                         modelStruct = setParam(modelStruct,'obj',x,1);
                         solution    = solveLP(modelStruct);
-                        
                     end
-                end
+               end
+               j=j+1;
             end
         end
-        modelsObj    = [modelsObj;mObjective];
+        modelsBioRxn = [modelsBioRxn;{mBioRxn}];
         if isempty(solution)
             modelsSolve  = [modelsSolve; false];
         else
@@ -72,7 +76,7 @@ for i=1:length(content)
         modelsGrowth = [modelsGrowth;Growth];
     end
 end
-results = table(modelNames,modelsImport,modelsObj,modelsGrowth,modelsSolve);
+results = table(modelNames,modelsImport,modelsObj,modelsBioRxn,modelsGrowth,modelsSolve);
 
 
 
