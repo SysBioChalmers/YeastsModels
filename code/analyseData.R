@@ -4,6 +4,7 @@ library(ggplot2)
 library(dplyr)
 library(ggrepel)
 library(viridis)
+library(tidyr)
 
 setwd('/Users/ivand/Documents/GitHub/YeastsModels/code')
 source('plotResults.R')
@@ -17,8 +18,17 @@ for (i in 1:ncol(dataset)){
 }
 colorsOrg <- c('grey','cyan','pink','orange','purple','brown','blue','black','green','red','dark green')
 
-#File availability plot
+#Load citations data for S. cerevisiae models
+citations_Sce <- read.csv(file = '../data/Scer_models_citations.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
+citations_Sce <- citations_Sce %>% gather(Model, Citations, colnames(citations_Sce)[2:ncol(citations_Sce)])
+citations_Sce$Model <- factor(citations_Sce$Model, levels = unique(citations_Sce$Model))
 setwd('../results/plots')
+plotTitle <- 'Scer_citations_timeCourse.png'
+png(plotTitle,width = 800, height = 800)
+getAreaPlot(citations_Sce,12)
+dev.off()
+
+#File availability plot
 column <- which(colnames(dataset)=='Available_file')
 plotTitle <- 'file_availability.png'
 png(plotTitle,width = 600, height = 600)

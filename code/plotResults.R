@@ -100,3 +100,11 @@ getClassCounts <- function(dataset,column){
   df <- data.frame(categories,counts,stringsAsFactors = FALSE)
   return(df)
 } 
+
+#Function that generates an area plot for the citations per year for a given set of models
+getAreaPlot <- function(dataset,fontSize){
+p2 <- ggplot(dataset, aes(x=year,y=Citations,group=Model)) +
+  geom_area(aes(fill=Model),position="identity",alpha=0.9) + 
+  theme_bw(base_size = 2*fontSize)
+plot(p2)
+}
