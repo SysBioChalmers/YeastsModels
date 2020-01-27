@@ -33,7 +33,7 @@ for (i in 1:length(models)){
     Format <- dataset$Primary_Format[i]
   }
   Publication_date <- dataset$Publication_date[i]
-  rowStr <- paste('| ',organism,' | ',model,' | ',Format,' | ',Publication_date,' |')
+  rowStr <- paste('| ',organism,' | ',model,' | ',Publication_date,' | ',Format,' |')
   strings <- rbind(strings,rowStr)
 }
 catalogueTable <- data.frame(strings,stringsAsFactors = FALSE)
