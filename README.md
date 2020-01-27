@@ -1,11 +1,13 @@
 # YeastsModels
 Container of computational models of metabolism for different yeast species. This repository also contains some `MATLAB` scripts for assessing the quality of the available models.
 
-- Model KeyWords:
+All available models are described [here](https://github.com/SysBioChalmers/YeastsModels/blob/master/models/README.md)
+
+- Models KeyWords:
 
 **GEM Category:** Multi-Species; **Utilisation:** Predictive simulation; **Field:** Metabolic-network reconstruction; **Type of Models:** Reconstruction;  **Taxonomy:** _Ascomycota_; **Metabolic System:** General Metabolism; **Condition:** Generic metabolism;
 
-- Last update: 2019-06-07
+- Last update: 2020-01-27
 
 This repository is administered by Iván Domenzain ([@IVANDOMENZAIN](https://github.com/IVANDOMENZAIN)) and Feiran Li ([@feiranl](https://github.com/feiranl)), Division of Systems and Synthetic Biology, Department of Biology and Biological Engineering, Chalmers University of Technology.
 
