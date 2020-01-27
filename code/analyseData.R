@@ -38,7 +38,7 @@ for (i in 1:length(models)){
 }
 catalogueTable <- data.frame(strings,stringsAsFactors = FALSE)
 #Create models_table file in "/models" folder
-write.table(catalogueTable,file = '../models/models_table.md',quote=FALSE,row.names = FALSE, col.names = FALSE,sep='\n')
+write.table(catalogueTable,file = '../models/README.md',quote=FALSE,row.names = FALSE, col.names = FALSE,sep='\n')
 #Load citations data for S. cerevisiae models
 citations_Sce <- read.csv(file = '../data/Scer_models_citations.txt', sep = '\t', header = TRUE, stringsAsFactors = FALSE)
 citations_Sce <- citations_Sce %>% gather(Model, Citations, colnames(citations_Sce)[2:ncol(citations_Sce)])
