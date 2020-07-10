@@ -16,7 +16,7 @@ getPieChart <- function(dataset,column,fontSize,colors,titleStr,alphaVal,noUpper
     percentage <- entries*100/nrow(dataset)
     prop       <- c(prop,percentage)
   }
-  prop <- round(prop, digits = 2)
+  prop <- round(prop, digits = 1)
   df   <- data.frame(classes,N_elements,prop,stringsAsFactors = FALSE)
   # Add label position
   df <- df %>%arrange(desc(classes))%>%mutate(lab.ypos = cumsum(prop) - 0.5*prop)
@@ -105,6 +105,6 @@ getClassCounts <- function(dataset,column){
 getAreaPlot <- function(dataset,fontSize){
 p2 <- ggplot(dataset, aes(x=year,y=Citations,group=Model)) +
   geom_area(aes(fill=Model),position="identity",alpha=0.9) + 
-  theme_bw(base_size = 2*fontSize)
+  theme_bw(base_size = 2.5*fontSize)+scale_fill_viridis(discrete = T, option = "E")
 plot(p2)
 }
