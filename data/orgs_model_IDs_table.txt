@@ -35,9 +35,11 @@ S. stipitis	iSS884	SBML
 S. stipitis	IDH814	SBML
 S. stipitis	iTL885	SBML
 R. toruloides	rhto_GEM	SBML
+R. toruloides	iRhto1108	SBML
 S. pombe	SpoMBEL1693	SBML
 C. glabrata	iNX804	SBML
 K. lactis	iOD907	SBML
 C. tropicalis	iCT646	SBML
 Z. parabailii	ZyPa1	NA
 K. marxianus	Kmar	SBML
+L. kluyveri	iPN730	SBML

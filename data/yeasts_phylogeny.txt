@@ -10,3 +10,4 @@ yarrowia lipolytica	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales
 candida tropicalis	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Debaryomycetaceae	ctp	1
 schizosaccharomyces pombe	Eukaryota	Fungi	Ascomycota	Schizosaccharomycetes	Schizosaccharomycetales	Schizosaccharomycetaceae	spo	1
 rhodotorula toruloides	Eukaryota	Fungi	Basidiomycota	Ustilaginomycetes	Ustilaginales	Ustilaginaceae	*	3
+Lachancea kluyveri	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
