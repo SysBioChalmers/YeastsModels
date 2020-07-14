@@ -1,13 +1,13 @@
 Name	Domain	Kingdom	Phylum	Class	Order	Family	KEGG ID	# of models
-saccharomyces cerevisiae	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	sce	18
-komagataella pastoris	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	7
-scheffersomyces stipitis	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	pic	3
-candida glabrata	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	cgr	1
-kluyveromyces lactis	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	kla	1
-Zygosaccharomyces parabailii	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
-kluyveromyces marxianus	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	kmx	1
-yarrowia lipolytica	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Dipodascaceae	yli	5
-candida tropicalis	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Debaryomycetaceae	ctp	1
-schizosaccharomyces pombe	Eukaryota	Fungi	Ascomycota	Schizosaccharomycetes	Schizosaccharomycetales	Schizosaccharomycetaceae	spo	1
-rhodotorula toruloides	Eukaryota	Fungi	Basidiomycota	Ustilaginomycetes	Ustilaginales	Ustilaginaceae	*	3
-Lachancea kluyveri	Eukaryota	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
+Saccharomyces cerevisiae	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	sce	19
+Komagataella pastoris	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	7
+Scheffersomyces stipitis	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	pic	4
+Candida glabrata	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	cgr	1
+Kluyveromyces lactis	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	kla	1
+Zygosaccharomyces parabailii	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
+Kluyveromyces marxianus	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	kmx	1
+Yarrowia lipolytica	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Dipodascaceae	yli	5
+Candida tropicalis	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Debaryomycetaceae	ctp	1
+Schizosaccharomyces pombe	Eukarya	Fungi	Ascomycota	Schizosaccharomycetes	Schizosaccharomycetales	Schizosaccharomycetaceae	spo	1
+Rhodotorula toruloides	Eukarya	Fungi	Basidiomycota	Ustilaginomycetes	Ustilaginales	Ustilaginaceae	*	2
+Lachancea kluyveri	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
