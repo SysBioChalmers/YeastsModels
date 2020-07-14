@@ -8,7 +8,7 @@ import glob
 import pandas as pd
 
 path         = os.getcwd()
-results_path = "../results/MEMOTE_test"
+results_path = "../results/MEMOTE_tests"
 #Create directory for output reports
 try:
 	os.mkdir(results_path)
