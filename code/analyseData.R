@@ -16,7 +16,7 @@ for (i in 1:ncol(dataset)){
   dataMEMOTE[,i]  <- gsub('#VALUE!',NaN,dataset[,i])
   dataset[is.na(dataset[,i]),i] <- NaN
 }
-colorsOrg <- c('grey','cyan','pink','orange','purple','brown','blue','black','green','red','dark green')
+colorsOrg <- c('grey','cyan','pink','orange','purple','brown','blue','black','green','red','dark green','magenta')
 
 #Create models catalogue table
 models <- unique(dataset$Model_ID)
@@ -169,10 +169,11 @@ scatterPlot(dataset,column,12,xLabel,yLabel,colorsOrg,1)
 dev.off()
 
 #Anual average citation scatter plot
-column    <- which(colnames(dataset)=='Annual_average')
+temp <- dataset[which(dataset$Available_file=='YES'),]
+column    <- which(colnames(temp)=='Annual_average')
 plotTitle <- 'AnualAvgCitations_scatter.png'
 png(plotTitle,width = 600, height = 600)
 xLabel <- 'Elapsed time since publication [years]'
 yLabel <- 'Anual average citations'
-scatterPlot(dataset,column,12,xLabel,yLabel,colorsOrg,1)
+scatterPlot(temp,column,12,xLabel,yLabel,colorsOrg,1)
 dev.off()
