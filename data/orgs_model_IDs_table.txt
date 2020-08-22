@@ -23,6 +23,7 @@ P. pastoris	Ppambel1254	SBML
 P. pastoris	iLC915	SBML
 P. pastoris	iMT1026	SBML
 P. pastoris	Kp.1.0	SBML
+P. pastoris	iRY1243	XLS
 P. pastoris	ihGlycopastoris	SBML
 P. pastoris	iMT1026V3	SBML
 Y. lipolytica	iNL895	SBML
