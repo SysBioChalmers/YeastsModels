@@ -68,7 +68,7 @@ column  <- which(colnames(dataset)=='Organism')
 output  <- getClassCounts(dataset,column)
 plotTitle <- 'models_organisms.png'
 png(plotTitle,width = 700, height = 600)
-barPlot_counts(output,'Organism','# of Models',12,colorsOrg,0.9,TRUE)
+barPlot_counts(output,'Organism','# of Models',12,colorsOrg,0.7,TRUE)
 dev.off()
 
 #Version control plot
@@ -132,7 +132,7 @@ output  <- getClassCounts(dataset,column)
 plotTitle <- 'model_formats.png'
 png(plotTitle,width = 600, height = 600)
 colors <- c('cyan','orange','black','blue','green','red','brown')
-barPlot_counts(output,'Format','Frequency',12,colors,0.9)
+barPlot_counts(output,'Format','Frequency',12,colors,0.7)
 dev.off()
 
 #S. cerevisiae MEMOTE metrics evolution
@@ -177,3 +177,12 @@ xLabel <- 'Elapsed time since publication [years]'
 yLabel <- 'Anual average citations'
 scatterPlot(temp,column,12,xLabel,yLabel,colorsOrg,1)
 dev.off()
+
+# "Readiness" 
+column <- which(colnames(dataset)=='Ready.to.use')
+data <- dataset[which(dataset[,column]!='NaN'),]
+plotTitle <- 'readiness.png'
+png(plotTitle,width = 600, height = 600)
+p <- getPieChart(data,column,12,c('red','blue'),'',0.5)
+dev.off()
+
