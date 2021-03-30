@@ -11,3 +11,4 @@ Candida tropicalis	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	De
 Schizosaccharomyces pombe	Eukarya	Fungi	Ascomycota	Schizosaccharomycetes	Schizosaccharomycetales	Schizosaccharomycetaceae	spo	1
 Rhodotorula toruloides	Eukarya	Fungi	Basidiomycota	Ustilaginomycetes	Ustilaginales	Ustilaginaceae	*	2
 Lachancea kluyveri	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
+Ogataea polymorpha	Eukarya	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Saccharomycetaceae	*	1
